@@ -1,4 +1,4 @@
-Koneksi PHP ke SQL SERVER Menggunakan XAMPP 1.7.7
+Koneksi PHP ke SQL SERVER Menggunakan XAMPP 1.7.9
 June 15, 2012AnwarLeave a commentGo to comments
 Kenapa ya ketika install XAMPP 1.7.7 tidak bisa melakukan koneksi ke SQL SERVER ? Padahal pada versi XAMPP sebelumnya gak ada masalah tuh. Pertanyaan klasik tapi agak membingungka, khususnya bagi para pemula. Kejadian ini juga saya alami dan sempat bingung, padahal waktu itu sedang  ada projek. Karena deadline yang yang begitu mepet bangat, akhirnya terpaksa deh pake versi sebelumnya, yaitu saya menggunakan XAMPP 1.7.1.
 
