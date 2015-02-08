@@ -1,0 +1,15 @@
+Koneksi PHP ke SQL SERVER Menggunakan XAMPP 1.7.7
+June 15, 2012AnwarLeave a commentGo to comments
+Kenapa ya ketika install XAMPP 1.7.7 tidak bisa melakukan koneksi ke SQL SERVER ? Padahal pada versi XAMPP sebelumnya gak ada masalah tuh. Pertanyaan klasik tapi agak membingungka, khususnya bagi para pemula. Kejadian ini juga saya alami dan sempat bingung, padahal waktu itu sedang  ada projek. Karena deadline yang yang begitu mepet bangat, akhirnya terpaksa deh pake versi sebelumnya, yaitu saya menggunakan XAMPP 1.7.1.
+
+Setelah projek selesai, saya pun ingin mencari tahu kenapa sih XAMPP 1.7.7 tidak bisa konek ke SQL SERVER. Setelah berlama-lama googling dan mengikuti forum, akhirnya terjawab juga masalah itu :). Ternyata hal ini dikarenakan extention php_mssql.dll dan php_pdo_mssql.dll hilang dari folder ext di XAMPP 1.7.7.
+
+Langkah 1: Copy file ntwdlib.dll ke folder C:\xampp\apache\bin dan C:\Windows/System32. 
+
+Langkah 2: Download file php_mssql.dll dan php_pdo_mssql.dll, berikut saya berikan link-nya: http://dl.dropbox.com/u/21634/Software/php_mssql.zip Ini saya dapatkan dari forum di Apache. Setelah selesai download Extract file archive datanya dan copy file php_mssql.ts.dll dan php_pdo_mssql.ts.dll ke folder C:\xampp\php\ext kemudian rename dengan nama php_mssql.dll  dan php_pdo_mssql.dll (hilangkan kata ‘ts’).
+
+Langkah 3: Lakukan modifikasi file php.ini pada Dynamic Extensions hilangkan tanda ‘;’ di baris awal extention yang anda rubah tadi (dalam hal ini pada file : php_mssql.dll dan php_pdo_mssql.dll). Kemudian save dan restart Apache.
+
+Langkah 4: Buka phpinfo() di localhost XAMPP untuk melihat apakah sudah aktif atau belum extension mssql nya. Jika sudah berarti anda telah berhasil dan XAMPP siap untuk koneksi ke SQL SERVER.
+
+Silahkan mencoba, semoga bermanfaat :)
